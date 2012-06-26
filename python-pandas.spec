@@ -22,6 +22,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	python-numpy >= 1.6.1
 Requires:	python-dateutil < 2
 Suggests:	python-scipy, python-matplotlib, python-pytz, python-tables, python-scikits-statsmodels
+BuildRequires:	python-setuptools
 BuildRequires:	python-numpy-devel >= 1.6.1
 BuildRequires:	python-dateutil < 2
 BuildRequires:	python-sphinx
