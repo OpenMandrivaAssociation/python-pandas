@@ -1,18 +1,18 @@
 %define	module	pandas
 %define name	python-%{module}
 %define version 0.8.0
-%define	rel		rc2
+%define	rel		1
 %if %mdkversion < 201100
-%define release %mkrel 0.%{rel}
+%define release %mkrel %{rel}
 %else
-%define	release	0.%{rel}
+%define	release	%{rel}
 %endif
 
 Summary:	Powerful Python data structures for data analysis and statistics
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Source0:	http://pypi.python.org/packages/source/p/%{module}/%{module}-%{version}%{rel}.tar.gz
+Source0:	http://pypi.python.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz
 Patch0:		setup-lm-0.8.0.patch
 Patch1:		make-doc-0.8.0.patch
 License:	BSD
@@ -38,7 +38,7 @@ manipulation tool available in any language. It is already well on its
 way toward this goal.
 
 %prep
-%setup -q -n %{module}-%{version}%{rel}
+%setup -q -n %{module}-%{version}
 %patch0 -p0
 %patch1 -p0
 
