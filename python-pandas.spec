@@ -1,6 +1,6 @@
 %define	module	pandas
 %define name	python-%{module}
-%define version 0.8.0
+%define version 0.8.1
 %define	rel		1
 %if %mdkversion < 201100
 %define release %mkrel %{rel}
@@ -21,7 +21,7 @@ Url:		http://pandas.sourceforge.net/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	python-numpy >= 1.6.1
 Requires:	python-dateutil < 2
-Suggests:	python-scipy, python-matplotlib, python-pytz, python-tables, python-scikits-statsmodels
+Suggests:	python-scipy, python-matplotlib, python-pytz, python-tables, python-statsmodels
 BuildRequires:	python-setuptools
 BuildRequires:	python-numpy-devel >= 1.6.1
 BuildRequires:	python-dateutil < 2
