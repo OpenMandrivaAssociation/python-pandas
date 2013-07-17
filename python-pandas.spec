@@ -2,8 +2,8 @@
 
 Summary:	Powerful Python data structures for data analysis and statistics
 Name:		python-%{module}
-Version:	0.8.1
-Release:	2
+Version:	0.9.0
+Release:	1
 Source0:	http://pypi.python.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz
 Patch0:		setup-lm-0.8.0.patch
 Patch1:		make-doc-0.8.0.patch
@@ -37,7 +37,7 @@ way toward this goal.
 
 %prep
 %setup -q -n %{module}-%{version}
-%patch0 -p0
+# %patch0 -p0
 %patch1 -p0
 
 %build
