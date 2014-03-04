@@ -1,2 +1,4 @@
+removed_sources:
+  pandas-0.8.1.tar.gz: f54ccf3d28a6b3dff1c7d771f6a3b542e1767051
 sources:
-  "pandas-0.9.0.tar.gz": 1e6f153556ef88578a0ada4ce26d8db8d3285c79
+  pandas-0.13.1.tar.gz: fe0ffb959f8204ef1302cf49c56a7138d4a7752a

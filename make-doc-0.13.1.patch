@@ -1,0 +1,12 @@
+diff -Naur pandas-0.13.1.orig/doc/make.py pandas-0.13.1/doc/make.py
+--- pandas-0.13.1.orig/doc/make.py	2014-03-04 12:20:19.099241165 -0500
++++ pandas-0.13.1/doc/make.py	2014-03-04 12:20:20.429241144 -0500
+@@ -26,7 +26,7 @@
+ import argparse
+ import jinja2
+ 
+-os.environ['PYTHONPATH'] = '..'
++#os.environ['PYTHONPATH'] = '..'
+ 
+ SPHINX_BUILD = 'sphinxbuild'
+ 
