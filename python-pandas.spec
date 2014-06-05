@@ -1,10 +1,11 @@
 %define	module	pandas
 
 Summary:	Powerful Python data structures for data analysis and statistics
+
 Name:		python-%{module}
-Version:	0.13.1
+Version:	0.14.0
 Release:	1
-Source0:	http://pypi.python.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz
+Source0:	http://pypi.python.org/packages/source/p/pandas/pandas-%{version}.tar.gz
 Patch0:		setup-lm-0.13.1.patch
 Patch1:		make-doc-0.13.1.patch
 License:	BSD
@@ -55,3 +56,4 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 # %doc LICENSE README.rst TODO.rst examples/ doc/build/html
 %doc LICENSE examples/
 %{py_platsitedir}/%{module}*
+
