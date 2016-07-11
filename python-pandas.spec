@@ -3,10 +3,9 @@
 Summary:	Powerful Python data structures for data analysis and statistics
 
 Name:		python-%{module}
-Version:	0.17.1
+Version:	0.18.1
 Release:	1
 Source0:	http://pypi.python.org/packages/source/p/pandas/pandas-%{version}.tar.gz
-Patch0:		setup-lm-0.13.1.patch
 Patch1:		make-doc-0.13.1.patch
 License:	BSD
 Group:		Development/Python
@@ -38,11 +37,10 @@ way toward this goal.
 
 %prep
 %setup -q -n %{module}-%{version}
-%patch0 -p0
-%patch1 -p1
+%apply_patches
 
 %build
-%__python setup.py build
+%__python setup.py build build_ext -lm
 
 %install
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
