@@ -37,7 +37,7 @@ way toward this goal.
 
 %prep
 %setup -q -n %{module}-%{version}
-%apply_patches
+%autopatch -p1
 
 %build
 %__python setup.py build build_ext -lm
