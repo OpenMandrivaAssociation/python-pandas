@@ -16,6 +16,7 @@ Suggests:	python-matplotlib
 Suggests:	python-pytz
 Suggests:	python-tables
 Suggests:	python-statsmodels
+BuildRequires:	pkgconfig(python)
 BuildRequires:	python-cython
 BuildRequires:	python-setuptools
 BuildRequires:	python-numpy-devel >= 1.6.1
