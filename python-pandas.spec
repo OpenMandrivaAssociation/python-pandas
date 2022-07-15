@@ -3,10 +3,9 @@
 Summary:	Powerful Python data structures for data analysis and statistics
 
 Name:		python-%{module}
-Version:	0.18.1
+Version:	1.4.2
 Release:	1
 Source0:	http://pypi.python.org/packages/source/p/pandas/pandas-%{version}.tar.gz
-Patch1:		make-doc-0.13.1.patch
 License:	BSD
 Group:		Development/Python
 Url:		http://pandas.sourceforge.net/
