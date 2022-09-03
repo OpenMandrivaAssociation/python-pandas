@@ -3,9 +3,9 @@
 Summary:	Powerful Python data structures for data analysis and statistics
 
 Name:		python-%{module}
-Version:	1.4.2
+Version:	1.4.4
 Release:	1
-Source0:	http://pypi.python.org/packages/source/p/pandas/pandas-%{version}.tar.gz
+Source0:	https://github.com/pandas-dev/pandas/releases/download/v%{version}/pandas-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		http://pandas.sourceforge.net/
@@ -17,7 +17,7 @@ Suggests:	python-pytz
 Suggests:	python-tables
 Suggests:	python-statsmodels
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python-cython
+BuildRequires:	python-cython >= 0.29.32
 BuildRequires:	python-setuptools
 BuildRequires:	python-numpy-devel >= 1.6.1
 BuildRequires:	python-dateutil
