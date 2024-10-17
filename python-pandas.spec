@@ -8,7 +8,7 @@ Release:	2
 Source0:	https://github.com/pandas-dev/pandas/releases/download/v%{version}/pandas-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
-Url:		http://pandas.sourceforge.net/
+Url:		https://pandas.sourceforge.net/
 Requires:	python-numpy >= 1.6.1
 Requires:	python-dateutil
 Suggests:	python-scipy
