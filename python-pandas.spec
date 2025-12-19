@@ -16,6 +16,7 @@ Suggests:	python-matplotlib
 Suggests:	python-pytz
 Suggests:	python-tables
 Suggests:	python-statsmodels
+BuildRequires:  git-core
 BuildRequires:	pkgconfig(python)
 BuildRequires:  python
 BuildRequires:  python-pip
