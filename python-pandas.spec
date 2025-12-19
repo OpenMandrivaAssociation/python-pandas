@@ -17,6 +17,7 @@ Suggests:	python-pytz
 Suggests:	python-tables
 Suggests:	python-statsmodels
 BuildRequires:	pkgconfig(python)
+BuildRequires:  python
 BuildRequires:  python-pip
 BuildRequires:  python%{pyver}dist(meson-python)
 BuildRequires:	python-cython >= 0.29.32
