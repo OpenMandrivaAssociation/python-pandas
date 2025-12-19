@@ -23,7 +23,7 @@ BuildRequires:  python-pip
 BuildRequires:  python%{pyver}dist(meson-python)
 BuildRequires:	python-cython >= 0.29.32
 BuildRequires:	python-setuptools
-BuildRequires:	python-setuptools-scm
+BuildRequires:	python-setuptools_scm
 BuildRequires:	python-numpy-devel >= 1.6.1
 BuildRequires:	python-dateutil
 BuildRequires:	python-matplotlib
