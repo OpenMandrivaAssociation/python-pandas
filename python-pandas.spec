@@ -41,10 +41,10 @@ way toward this goal.
 %autopatch -p1
 
 %build
-%__python setup.py build build_ext -lm
+%py_build
 
 %install
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
+%py_install
 # pushd doc
 # export PYTHONPATH=`dir -1d ../build/lib*`
 # %__python make.py html
