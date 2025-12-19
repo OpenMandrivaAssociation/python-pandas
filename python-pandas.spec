@@ -18,6 +18,7 @@ Suggests:	python-tables
 Suggests:	python-statsmodels
 BuildRequires:	pkgconfig(python)
 BuildRequires:  python-pip
+BuildRequires:  python%{pyver}dist(meson-python)
 BuildRequires:	python-cython >= 0.29.32
 BuildRequires:	python-setuptools
 BuildRequires:	python-numpy-devel >= 1.6.1
