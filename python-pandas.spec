@@ -3,25 +3,25 @@
 Summary:	Powerful Python data structures for data analysis and statistics
 
 Name:		python-%{module}
-Version:	1.5.2
-Release:	3
+Version:	2.3.3
+Release:	1
 Source0:	https://github.com/pandas-dev/pandas/releases/download/v%{version}/pandas-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		https://pandas.sourceforge.net/
-Requires:	python-numpy >= 1.6.1
-Requires:	python-dateutil
-Suggests:	python-scipy
-Suggests:	python-matplotlib
-Suggests:	python-pytz
-Suggests:	python-tables
-Suggests:	python-statsmodels
+Requires:	python%{pyver}dist(numpy)
+Requires:	python%{pyver}dist(dateutil)
+Suggests:	python%{pyver}dist(scipy)
+Suggests:	python%{pyver}dist(matplotlib)
+Suggests:	python%{pyver}dist(pytz)
+Suggests:	python%{pyver}dist(tables)
+Suggests:	python%{pyver}dist(statsmodels)
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python-cython >= 0.29.32
-BuildRequires:	python-setuptools
-BuildRequires:	python-numpy-devel >= 1.6.1
-BuildRequires:	python-dateutil
-BuildRequires:	python-matplotlib
+BuildRequires:	python%{pyver}dist(cython) >= 0.29.32
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(numpy)
+BuildRequires:	python%{pyver}dist(dateutil)
+BuildRequires:	python%{pyver}dist(matplotlib)
 BuildRequires:	python-sphinx
 BuildRequires:	ipython
 BuildRequires:	pkgconfig(lapack)
@@ -55,4 +55,3 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 # %doc LICENSE README.rst TODO.rst examples/ doc/build/html
 %doc LICENSE
 %{py_platsitedir}/%{module}*
-
