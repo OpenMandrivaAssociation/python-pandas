@@ -11,7 +11,7 @@ Group:		Development/Python
 URL:		https://github.com/pandas-dev/pandas
 BuildSystem:	meson
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python%{pyver}dist(cython) >= 0.29.32
+BuildRequires:	python%{pyver}dist(cython) >= 3.0.5
 BuildRequires:	python%{pyver}dist(matplotlib)
 BuildRequires:	python%{pyver}dist(meson-python)
 BuildRequires:	python%{pyver}dist(numpy)
@@ -48,6 +48,9 @@ way toward this goal.
 export CFLAGS="%{optflags}"
 export LDFLAGS="%{ldflags} -lpython%{py_ver} -lm"
 %py_build
+
+%install
+%py_install
 
 %files
 %doc README.md
