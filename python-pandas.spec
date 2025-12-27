@@ -56,3 +56,5 @@ export LDFLAGS="%{ldflags} -lpython%{py_ver} -lm"
 %doc README.md
 %license LICENSE LICENSES/
 %{py_platsitedir}/%{module}/*
+%{py_platsitedir}/%{module}-%{version}.dist-info
+
