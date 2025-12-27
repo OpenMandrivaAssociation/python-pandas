@@ -44,6 +44,11 @@ the most powerful and flexible open source data analysis /
 manipulation tool available in any language. It is already well on its
 way toward this goal.
 
+%build
+export CFLAGS="%{optflags}"
+export LDFLAGS="%{ldflags} -lpython%{py_ver}"
+%py_build
+
 %files
 %doc README.md
 %license LICENSE LICENSES/
