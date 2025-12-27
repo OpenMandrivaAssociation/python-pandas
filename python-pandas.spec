@@ -46,7 +46,7 @@ way toward this goal.
 
 %build
 export CFLAGS="%{optflags}"
-export LDFLAGS="%{ldflags} -lpython%{py_ver}"
+export LDFLAGS="%{ldflags} -lpython%{py_ver} -lm"
 %py_build
 
 %files
