@@ -3,8 +3,8 @@
 Summary:	Powerful Python data structures for data analysis and statistics
 
 Name:		python-%{module}
-Version:	2.3.3
-Release:	2
+Version:	3.0.5
+Release:	1
 Source0:	https://github.com/pandas-dev/pandas/releases/download/v%{version}/%{module}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
