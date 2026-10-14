@@ -4,13 +4,13 @@ Summary:	Powerful Python data structures for data analysis and statistics
 
 Name:		python-%{module}
 Version:	3.0.5
-Release:	1
+Release:	2
 Source0:	https://github.com/pandas-dev/pandas/releases/download/v%{version}/%{module}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 URL:		https://github.com/pandas-dev/pandas
 BuildSystem:	meson
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(cython) >= 3.0.5
 BuildRequires:	python%{pyver}dist(matplotlib)
 BuildRequires:	python%{pyver}dist(meson-python)
@@ -21,8 +21,7 @@ BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(tzdata)
 BuildRequires:	python%{pyver}dist(versioneer)
 BuildRequires:	python%{pyver}dist(wheel)
-BuildRequires:	python-sphinx
-BuildRequires:	ipython
+BuildRequires:	python%{pyver}dist(sphinx)
 BuildRequires:	pkgconfig(lapack)
 Requires:	python%{pyver}dist(numpy)
 Requires:	python%{pyver}dist(python-dateutil)
