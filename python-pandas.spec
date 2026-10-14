@@ -9,8 +9,11 @@ Source0:	https://github.com/pandas-dev/pandas/releases/download/v%{version}/%{mo
 License:	BSD
 Group:		Development/Python
 URL:		https://github.com/pandas-dev/pandas
-BuildSystem:	meson
+BuildRequires:	python
+BuildRequires:	meson
+BuildRequires:	ninja
 BuildRequires:	pkgconfig(python3)
+BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(cython) >= 3.0.5
 BuildRequires:	python%{pyver}dist(matplotlib)
 BuildRequires:	python%{pyver}dist(meson-python)
@@ -43,10 +46,23 @@ the most powerful and flexible open source data analysis /
 manipulation tool available in any language. It is already well on its
 way toward this goal.
 
+%prep
+%autosetup -C -p1
+
 %build
+# Meson 1.12.1's Cython sanity check links with the default linker flags,
+# which include --no-undefined. Without libpython that check fails during
+# configure, so this is not a declarative meson build.
 export CFLAGS="%{optflags}"
 export LDFLAGS="%{ldflags} -lpython%{py_ver} -lm"
+set +e
 %py_build
+rc=$?
+set -e
+if [ "$rc" -ne 0 ]; then
+	find . -name meson-log.txt -exec cat {} +
+	exit "$rc"
+fi
 
 %install
 %py_install
